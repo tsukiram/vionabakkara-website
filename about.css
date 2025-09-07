@@ -1,0 +1,263 @@
+/* About Section */
+.about-section {
+    background: #f8f9fa;
+    padding: 100px 0;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1.8fr 1.2fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+.about-main-info {
+    padding-right: 2rem;
+}
+
+.about-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.about-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 80px;
+    height: 5px;
+    background: linear-gradient(45deg, #3498db, #5dade2);
+    border-radius: 5px;
+}
+
+.about-description {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 1.8rem;
+    line-height: 1.8;
+}
+
+.about-details-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+    margin-top: 3rem;
+    border-left: 5px solid #3498db;
+}
+
+.about-details-card h4 {
+    font-size: 1.4rem;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.detail-item {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    margin-bottom: 1rem;
+    font-size: 1.05rem;
+    color: #444;
+}
+
+.detail-item i {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background: linear-gradient(45deg, #3498db, #5dade2);
+    border-radius: 8px;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 10px rgba(52, 152, 219, 0.2);
+}
+
+/* About Sidebar - Gambar Profil & Kartu */
+.about-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.about-image-wrapper {
+    width: 100%;
+    height: 350px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    border: 8px solid white;
+    position: relative;
+    background: linear-gradient(45deg, #3498db, #5dade2);
+}
+
+.about-profile-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.about-profile-photo:hover {
+    transform: scale(1.05);
+}
+
+.about-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    border-left: 5px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.about-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+    border-left-color: #3498db;
+}
+
+.about-card h4 {
+    font-size: 1.4rem;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+/* Education Card Specifics */
+.education-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.2rem;
+    margin-bottom: 1.2rem;
+    font-size: 1rem;
+    color: #444;
+}
+
+.education-item:last-child {
+    margin-bottom: 0;
+}
+
+.education-item i {
+    color: #3498db;
+    font-size: 1.3rem;
+    flex-shrink: 0;
+}
+
+.education-item span {
+    display: block;
+}
+
+.education-item .year {
+    font-weight: 500;
+    color: #777;
+    background: #e3f2fd;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    margin-top: 5px;
+    display: inline-block;
+}
+
+/* Skills Card Specifics */
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+.skill-tag {
+    background: #e9f7ef;
+    color: #28a745;
+    padding: 0.7rem 1.3rem;
+    border-radius: 30px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    border: 1px solid #28a745;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.skill-tag:hover {
+    background: #28a745;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* About Responsive */
+@media (max-width: 992px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .about-main-info {
+        padding-right: 0;
+    }
+    .about-title {
+        text-align: center;
+    }
+    .about-title::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .about-details-card, .about-card {
+        border-left: none;
+    }
+    .about-details-card:hover, .about-card:hover {
+        border-left-color: transparent;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-section {
+        padding: 80px 0;
+    }
+    .about-title {
+        font-size: 2.2rem;
+        margin-bottom: 1rem;
+    }
+    .about-description {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    .about-details-card h4, .about-card h4 {
+        font-size: 1.2rem;
+    }
+    .about-image-wrapper {
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-title {
+        font-size: 1.8rem;
+    }
+    .about-details-card, .about-card {
+        padding: 1.5rem;
+    }
+    .detail-item, .education-item {
+        font-size: 0.95rem;
+    }
+    .skills-list {
+        justify-content: center;
+    }
+    .skill-tag {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+    }
+    .about-image-wrapper {
+        height: 250px;
+    }
+}
